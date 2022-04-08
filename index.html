@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<meta name="robots" content="noindex, nofollow, noarchive">
+	<meta name="referrer" content="no-referrer">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Congratulations!</title>
+	<link rel="stylesheet" href="style.css">
+	<!-- GET URL + DATE -->
+	<script>
+		function getURLParameter(name) {
+			return decodeURI(
+				(RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+			);
+		}
+
+		function dateOffset(j, a) {
+			var l = new Boolean(null == j || 0 == j || void 0 == j || "" == j),
+				e = new Date(Date.now() - 24 * j * 60 * 60 * 1000);
+			1 == l && (j = 0);
+			var k = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+				i = ["January", "February", "March", "April", "Maybe", "June", "July", "August", "September", "October",
+					"November", "December"
+				];
+			return null != !a && 0 != !a && void 0 != !a ? e.getDate() + " " + i[e.getMonth()] : "day_name_only" == a && l ?
+				k[e.getDay()] : "top_date" == a && l ? k[e.getDay()] + ", " + e.getDate() + " " + i[e.getMonth()] + " " + e
+				.getFullYear() : void 0
+		};
+	</script>
+</head>
+
+<body oncontextmenu="return!1" onload="setButtonHeight(),autospin1()">
+
+	<div id="header">
+		<span class="menu"></span>
+		<h3><span id="headline">LOYALTY PROGRAM</span></h3><span class="icon"></span>
+	</div>
+	<div id="container">
+		<div style="text-align: center;" id="firstpage">
+			<div class="date" id="topDate" style="padding-bottom:10px;margin:0">
+				<script>
+					document.write(dateOffset(0, "top_date"));
+				</script>
+			</div>
+			<div style="margin-bottom:2px">
+				<div id="subheadline">
+					<p style="font-size:18px"><b>Congratulations!</b></p>
+					<p style="padding-top:10px">Today you are lucky!</p>
+				</div>
+				<div class="intro" style="padding-top:5px">
+					Every <span id="today">
+						<script>
+							document.write(dateOffset(0, "day_name_only"));
+						</script>
+					</span>
+					we select 7 <script>
+						document.write(getURLParameter("browser"));
+					</script> users to receive prizes from our sponsors. Turn the wheel to see which prize you can
+					claim!
+				</div>
+				<div id="wheelCon">
+					<img class="spinAround2 transparent" height="501" id="wheel" src="pw_ix.png" width="501"> <input
+						id="pressButton" onclick="spin()" style="top: 106.2px;" type="button" value="">
+					<div><img class="animated rotateIn" id="devMockup" src="ixo.png"
+							style="display: block; left: 97px; top: 33px;"></div>
+				</div>
+			</div>
+			<div id="secondpage">
+				<div class="congrats">
+					<h4>
+						<a href="https://tracker.sukki.shop/click"
+							style="cursor:pointer!important">
+							<span style="color: #3C5A96;">Congratulations!<br>You can claim the new iPhone 13
+								Pro!</span>
+						</a>
+					</h4>
+				</div>
+				<div class="congrats" style="text-align:left">
+					<ol>
+						<li>Choose a color that you like. You will be redirected to our sponsor's website</li>
+						<li>On the sponsor's website, enter your name and surname, as well as the shipping address to
+							claim your prize</li>
+					</ol>
+					<b>IMPORTANT:</b> This prize is only available while supplies last!
+				</div>
+				<div class="timer">Offer valid for
+					<span style="color: red;"><b><span id="mins">4</span> minutes and <span id="hsecs">59</span>
+							seconds</b>
+					</span>
+				</div>
+				<div class="prize">
+					<table>
+						<tbody>
+							<tr>
+								<th></th>
+								<td style="padding:10px 5px 10px 0;text-align:center"><img src="ix-s.png"
+										style="max-width:150px"></td>
+								<td style="line-height:1.6">
+									<p style="text-align:left"><a href="https://tracker.sukki.shop/click"
+											style="cursor:pointer!important"><span class="name">iPhone 13 Pro 
+												(Blue)</span></a></p>
+									<p><span class="smallfont">Super Retina XDR display, 256GB</span></p>
+									<p class="regular_price">Normal price: <s class="red_text">
+											<script>
+												document.write(getURLParameter("pr"));
+											</script>$1,099
+										</s></p>
+									<p class="your_price">Your price: <span>
+											<script>
+												document.write(getURLParameter("yp"));
+											</script>$0
+										</span></p>
+									<p class="remaining"><b>Available: <span>1</span></b></p>
+									<div>
+										<a class="button"
+											<a href="https://tracker.sukki.shop/click"
+											style="cursor:pointer!important"> Choose </a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="prize">
+					<table>
+						<tbody>
+							<tr>
+								<th></th>
+								<td style="padding:10px 5px 10px 0;text-align:center"><img src="ix-g.png"
+										style="max-width:150px"></td>
+								<td style="line-height:1.6">
+									<p href="https://tracker.sukki.shop/click"
+											style="cursor:pointer!important"><span class="name">iPhone 13 Pro (Green)</span></a>
+									</p>
+									<p><span class="smallfont">Super Retina XDR display, 256GB</span></p>
+									<p class="regular_price">Normal price: <s class="red_text">
+											<script>
+												document.write(getURLParameter("pr"));
+											</script>$1,099
+										</s></p>
+									<p class="your_price">Your price: <span>
+											<script>
+												document.write(getURLParameter("yp"));
+											</script>$0
+										</span></p>
+									<p class="remaining"><b>Available: <span>3</span></b></p>
+									<div>
+										<a class="button"
+											<a href="https://tracker.sukki.shop/click"
+											style="cursor:pointer!important"> Choose </a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="comments">
+				<div class="wi_like_wrap border_bottom">
+					<span class="like_people"><span class="like_people_images"><span class="like_people_image_wrap"><img
+									class="like_people_image" height="24" src="like_user_1.jpeg" width="24"></span>
+							<span class="like_people_image_wrap"><img class="like_people_image" height="24"
+									src="like_user_2.jpeg" width="24"></span></span>
+						<span class="like_people_text">1537 people like this</span></span>
+				</div>
+				<div class="wi_buttons border_bottom">
+					<div class="wi_buttons_wrap">
+						<span class="like_wrap"><span class="item_like _i"><i class="i_like"></i> <b
+									class="v_like">1537</b></span> <span class="item_share is_empty _i"><i
+									class="i_share"></i> <b class="v_share">234</b></span></span> <span
+							class="item_views"><i class="i_views"></i> <b class="v_views">544K</b></span>
+					</div>
+				</div>
+				<div style="text-align: center;">
+					<table cellpadding="4" cellspacing="0" style="padding-top:10px;font-size:13px" width="100%">
+						<tbody id="comments_list">
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="7.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Alex Fabian</div>
+									<div class="comment_text">Landed on the iPad! Honestly, I was hoping for the Mac,
+										but not today ...</div>
+									<div class="comments__item__meta">
+										<div class="item_date">Yesterday at 08:13
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="2.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Darryl Brown</div>
+									<div class="comment_text">I got 1 spin, but the wheel didnt land on a prize :(. Can
+										I get another chance?
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(2));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="3.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Pierre Therrien</div>
+									<div class="comment_text">I just unpacked the new iMac! This is the best prize of
+										all!
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(2));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="4.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Taylor Staten</div>
+									<div class="comment_text">At first I thought it was a joke, but this morning the
+										mail came with the phone, I also got a T-shirt with a logo!
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(2));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="6.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Stella Kovar</div>
+									<div class="comment_text">My iMac arrived this morning! I love it!!!
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(3));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="1.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Deborah Posey</div>
+									<div class="comment_text">I got the iPad. still cant believe it!
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(3));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+							<tr>
+								<td align="right" class="photo_avatar" valign="top" width="40"><img src="8.jpeg"></td>
+								<td align="left" valign="top">
+									<div class="comment_name">Rodney Howard</div>
+									<div class="comment_text">Went to the iPhone, but I already have it, can I have an
+										iPad instead?
+									</div>
+									<div class="comments__item__meta">
+										<div class="item_date">
+											<script>
+												document.write(dateOffset(4));
+											</script>
+										</div>
+									</div>
+									<div class="pi_links">
+										<span class="like_wrap"><span class="pi_link">Like</span></span> <span
+											class="pi_reply_wrap">· <span>Comment</span></span> <span
+											class="pi_acts_link"><i class="i_icon"></i></span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<hr>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="show_next_wrap">
+						<span class="show_next">See all</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fixed_footer"><img class="clip" src="clip_footer_3.png"> <input class="footer_input"
+				placeholder="Your message" type="text" value=""> <img class="btn_send" src="footer_right.png">
+		</div>
+	</div>
+
+	<!-- Custom JS Script -->
+	<script src="main_script.js"></script>
+
+	
+	<script src="bootstrap.js"></script>
+
+
+
+</body>
+
+</html>
